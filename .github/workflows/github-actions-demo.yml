@@ -12,7 +12,7 @@ jobs:
             tqdm
       - run: |
           cd ..
-          python3 main.py
+          supermark --all
       - run: |
           cd ..
           pwd
