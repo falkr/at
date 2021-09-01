@@ -12,10 +12,10 @@ jobs:
             tqdm
       - run: |
           cd ..
-          pwd
+          python3 main.py
       - run: |
           cd ..
-          python3 main.py
+          pwd
       - run: supermark --all
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
