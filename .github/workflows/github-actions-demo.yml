@@ -13,8 +13,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@main
       - run: |
-          cd ..
           ls
+      - run: |
+          tree
       - run: |
           cd ..
           pwd
