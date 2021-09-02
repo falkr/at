@@ -10,9 +10,11 @@ jobs:
           packages: |
             supermark
             tqdm
+      - name: checkout
+        uses: actions/checkout@main
       - run: |
           cd ..
-          supermark --all
+          ls
       - run: |
           cd ..
           pwd
