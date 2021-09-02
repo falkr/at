@@ -28,6 +28,9 @@ jobs:
       - run: |
           $CONDA/bin/pandoc --help
       - run: |
+          ln -s $CONDA/bin/pandoc /usr/local/bin/pandoc
+          pandoc --help
+      - run: |
           pwd
           tree
           supermark --all
