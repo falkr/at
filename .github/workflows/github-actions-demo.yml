@@ -9,23 +9,14 @@ jobs:
         with:
           packages: |
             supermark
-            tqdm
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      - run: |
-          ls
-      - run: |
-          pwd
-          tree
-      - run: |
-          cd ..
-          pwd
       - name: Install pandoc
         run: |
           $CONDA/bin/conda install pandoc
           ln -s $CONDA/bin/pandoc /usr/local/bin/pandoc
       - name: Run Supermark
         run: |
-          supermark --all
-      - name: push
+          supermark buil --all --log
+      - name: Push
         uses: actions-x/commit@v2
