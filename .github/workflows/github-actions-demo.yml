@@ -17,6 +17,6 @@ jobs:
           ln -s $CONDA/bin/pandoc /usr/local/bin/pandoc
       - name: Run Supermark
         run: |
-          supermark buil --all --log
+          supermark build --all --log
       - name: Push
         uses: actions-x/commit@v2
